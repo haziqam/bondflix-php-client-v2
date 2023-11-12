@@ -1,0 +1,12 @@
+@import url('/public/css/lib/submit-button.css');
+@import url('/public/css/lib/index/body.css');
+@import url('/public/css/404.css');
+
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    color: red;
+    background-color: rgb(255,255,255,0.7);
+    padding: 4px;
+}

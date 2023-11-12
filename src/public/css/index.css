@@ -1,0 +1,75 @@
+@import url('/public/css/lib/submit-button.css');
+@import url('/public/css/lib/loading.css');
+@import url('/public/css/lib/index/navbar.css');
+@import url('/public/css/lib/index/body.css');
+
+.centered-content {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container {
+    display: flex;
+    width: 40%;
+    height: 50px;
+    align-items: stretch;
+}
+
+h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+
+#input-username {
+    flex: 1;
+    height: auto;
+    background: rgba(59, 55, 55, 0.6);
+    color: #fff;
+    width: 30%;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: 1px solid #39db5f;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#input-username::placeholder {
+    font-size: 16px;
+    color: #bdb5b5;
+}
+
+#input-username:focus {
+    outline: none;
+}
+
+.navbar #sign-in-button,
+.navbar .submit-button {
+    margin-right: 20px;
+    height: auto;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+}

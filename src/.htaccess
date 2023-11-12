@@ -1,0 +1,12 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteBase /
+
+# Deliver the folder or file directly if it exists on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-
+
+# Push every request to index.php
+RewriteRule ^(.+)$ index.php [QSA]

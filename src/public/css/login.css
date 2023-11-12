@@ -1,0 +1,72 @@
+@import url('shared-styles.css');
+@import url('/public/css/lib/submit-button.css');
+@import url('/public/css/lib/index/body.css');
+@import url('/public/css/lib/index/navbar.css');
+@import url('/public/css/lib/loading.css');
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1;
+}
+
+.register-container {
+    display: flex;
+    align-items: stretch;
+}
+
+h1 {
+    color: #fff;
+}
+
+#input-username,
+#input-password {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    box-sizing:border-box;
+}
+
+#input-username:focus,
+#input-password:focus {
+    outline: none;
+}
+
+#input-username:hover,
+#input-password:hover {
+}
+
+.submit-button {
+    height: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.register-link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    transition: text-decoration 0.2s;
+    float: right;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    max-width: 200px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}

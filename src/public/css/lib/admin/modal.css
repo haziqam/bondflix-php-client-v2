@@ -1,0 +1,68 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    align-items: normal;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.edit-user-modal {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.edit-user-modal td label {
+    margin: 0;
+    padding-right: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.edit-user-modal input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-content button {
+    padding: 4px 8px;
+    margin-top: 10px;
+    background-color: #831010;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+.modal-content button:hover {
+    background-color: #690c0c;
+}

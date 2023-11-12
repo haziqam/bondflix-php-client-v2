@@ -1,0 +1,234 @@
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar .logo {
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    max-width: 150px;
+}
+
+.navbar #menu-left {
+    display: flex;
+    gap: 30px;
+    margin-left: 32px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar #menu-right {
+    margin-right: 64px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+#menu-right .hamburger-button {
+    display: none;
+}
+
+.navbar > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: inline;
+}
+
+.navbar .navbar-account-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .account-menu-for-phone {
+    display: none;
+}
+
+#profile-picture-navbar {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .search-bar {
+    height: 40px;
+    border-radius: 4px;
+}
+
+#sort-filter-button {
+    background-color: black;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    border-color: white;
+    color: white;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-container label {
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.filter-container input[type="date"] {
+    color-scheme: dark;
+    background-color: black;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    border-color: white;
+    color: white;
+}
+
+.filter-container button {
+    background-color: white;
+    outline: none;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-container select,
+.filter-container input[type="date"],
+.filter-container button{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar #genre-dropdown {
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.filter-container input[type="date"]:hover::after {
+    color-scheme: dark;
+    content: attr(title);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.filter-container input[type="date"]::before {
+    color-scheme: dark;
+    content: attr(title);
+    font-family: "Roboto", "sans-serif";
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.filter-container input[type="date"]:hover::after {
+    opacity: 1;
+}
+
+#phone-navbar-search-input {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        gap: 50px;
+    }
+
+    .navbar #menu-left {
+        display: none;
+    }
+
+    .navbar #menu-right {
+        margin-right: 8vw;
+    }
+
+    .navbar #menu-right .search-bar {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+    }
+
+    .navbar #menu-right .hamburger-button {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar #menu-right .navbar-account-button {
+        display: none;
+    }
+
+    .more-recommendation {
+        margin-top: 120px;
+    }
+
+    .filter-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .more-recommendation {
+        margin-top: 120px;
+    }
+
+    .navbar .account-menu {
+        right: 10%;
+    }
+    .filter-container {
+        display: none;
+    }
+}
+

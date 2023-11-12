@@ -1,0 +1,133 @@
+@import url("/public/css/lib/index/navbar.css");
+@import url("/public/css/dashboard.css");
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+main {
+    padding-top: 78px;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+#account-settings-container {
+    width: 40%;
+}
+
+#account-settings-container h1 {
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#account-settings-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+#profile-picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#account-settings-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#account-settings-content label {
+    display: block;
+    padding-bottom: 8px;
+}
+
+.text-input {
+    height: 35px;
+    width: 250px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+#edit-profile-pic-button {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    position: relative;
+    border: 0;
+    right: 15px;
+    top: 5px;
+}
+
+#edit-profile-pic-button:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+#account-settings-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#account-settings-buttons button {
+    min-height: 32px;
+    padding: 6px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0;
+}
+
+#save-button {
+    background-color: white;
+    border: 0;
+}
+
+#save-button:hover {
+    background-color: rgb(220, 217, 217);
+}
+
+#cancel-button {
+    background-color: black;
+    color: rgb(179, 179, 179);
+    border: 2px solid rgb(179, 179, 179);
+}
+
+#cancel-button:hover {
+    background-color: red;
+    border-color: red;
+}
+
+
+#username,
+#subscription{
+    border-color: #444444;
+}
+
+#profile-picture {
+    max-width: 100px;
+    max-height: 100px;
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+@import url("/public/css/lib/admin/search-bar.css");
+@import url("/public/css/lib/admin/modal.css");
+
+#users-item {
+    background-color: #e50914;
+}
+
+#users-item:hover {
+    background-color: #bd0912;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#add-user-button {
+    margin-left: auto;
+}
+
+#admin-filter-button {
+    background-color: green;
+    color: white;
+}
+
+#sub-filter-button {
+    background-color: green;
+    color: white;
+}
+
+#enable-filter-button {
+    background-color: #e50914;
+    color: white;
+}
+
+.new-user-modal {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.new-user-modal td label {
+    margin: 0;
+    padding-right: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.new-user-modal input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pagination {
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pagination button {
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    margin: 5px;
+}

@@ -1,0 +1,59 @@
+.admin-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    width: auto;
+    margin: 30px;
+}
+
+.admin-table th {
+    /*position: sticky;*/
+    background-color: #E50914;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    /*top: 0;*/
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.admin-table td {
+    padding: 8px;
+    max-width: 200px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-table button {
+    padding: 4px 8px;
+    background-color: #831010;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-table button:hover {
+    background-color: #690c0c;
+}
+
+.green-status {
+    color: green;
+}
+
+.red-status {
+    color: red;
+}

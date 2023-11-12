@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+  web:
+    container_name: php-apache
+    build:
+      context: .
+      dockerfile: dockerfile/Dockerfile.php-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - postgres
+  postgres:
+    container_name: postgres-db
+    build:
+        context: .
+        dockerfile: dockerfile/Dockerfile.postgres
+    environment:
+      POSTGRES_USER: wbdasik
+      POSTGRES_PASSWORD: wbdasikbossq
+      POSTGRES_DB: wbd_data
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
