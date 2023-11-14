@@ -1,0 +1,108 @@
+@import url('/public/css/lib/submit-button.css');
+@import url('/public/css/lib/index/body.css');
+
+.centered-content {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 64px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: rgb(0,0,0,1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar .logo {
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    max-width: 120px;
+}
+
+.submit-button {
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.submit-button:hover {
+    background-color: rgb(255,255,255, 0.8);
+}
+
+#back-button {
+    text-decoration: none;
+}
+
+.money-input-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.money-input-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.money-input-container input[type="number"] {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.money-input-container input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,.5);
+}
+
+.money-input-container button.submit-button {
+    width: 62%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.money-input-container button.submit-button:hover {
+    background-color: #0056b3;
+}

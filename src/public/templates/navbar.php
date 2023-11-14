@@ -11,6 +11,7 @@
             <a href="/mylist">My List</a>
             <a href="/dashboard">Movies</a>
             <a href="/activate/subscription">Activate Subscription</a>
+            <a href="/premium/creators">Creator List</a>
         </div>
     </div>
     <div id="menu-right">
@@ -43,6 +44,9 @@
                 </li>
                 <li class="account-menu-for-phone"
                     <a href="/activate/subscription">Activate Subscription</a>
+                <li>
+                <li class="account-menu-for-phone"
+                <a href="/premium/creators">Premium Creator List</a>
                 <li>
                     <a href="" onclick="logout()">Logout</a>
                 </li>

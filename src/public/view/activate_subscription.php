@@ -1,20 +1,21 @@
 <?php
-$pageTitle = 'Page Not Found';
+$pageTitle = 'Activation Page';
 include BASE_PATH . "/public/templates/header.php";
 ?>
 
-<!--TODO: Tolong ini diimplement insert voucher code atau apalah-->
-<link rel="stylesheet" href="/public/css/404.css">
+<link rel="stylesheet" href="/public/css/activate_subscription.css">
 <body>
 <nav class="navbar">
     <a href="/"><img src="/public/logo.png" alt="Bonflix Logo" class="logo"></a>
 </nav>
 <div class="centered-content">
     <div class="container">
-        <h1>Sorry.</h1>
-        <h3>Wsadsadasdsadsada're looking for</h3>
+        <div class="money-input-container">
+            <label for="amount">Enter Amount:</label>
+            <input type="number" id="amount" name="amount" min="0" placeholder="Enter amount">
+            <button id="send-button" class="submit-button">Send</button>
+        </div>
     </div>
-    <a href="/" id="back-button" class="submit-button">Bondflix Home Page</a>
 </div>
-<script src="/public/js/index.js"></script>
+<script src="/public/js/activate_subscription.js"></script>
 </body>

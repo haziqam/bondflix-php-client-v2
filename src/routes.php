@@ -92,6 +92,10 @@ $router->addPage('/activate/subscription', function () {
     redirect('activate_subscription');
 }, [NotSubscribedCheck::getInstance()]);
 
+$router->addPage('/premium/creators', function () {
+    redirect('list_of_premium_creators');
+}, [NotSubscribedCheck::getInstance()]);
+
 $router->addPage('/watch', function ($urlParams) {
     redirect('watch', ['urlParams' => $urlParams]);
 }, [LoggedInCheck::getInstance(), SubscribedCheck::getInstance()]);
