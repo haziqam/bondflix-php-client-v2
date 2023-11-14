@@ -11,7 +11,7 @@
             <a href="/mylist">My List</a>
             <a href="/dashboard">Movies</a>
             <a href="/activate/subscription">Activate Subscription</a>
-            <a href="/premium/creators">Creator List</a>
+            <a href="/premium/contents">Premium Content</a>
         </div>
     </div>
     <div id="menu-right">
