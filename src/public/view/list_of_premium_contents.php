@@ -7,6 +7,7 @@ include BASE_PATH . "/public/templates/header.php";
 <body>
 <nav class="navbar">
     <a href="/"><img src="/public/logo.png" alt="Bonflix Logo" class="logo"></a>
+    <a class="navbar-item" href="/dashboard">Go Back</a>
 </nav>
 <div class="centered-content">
     <div class="container">

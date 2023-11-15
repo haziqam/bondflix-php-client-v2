@@ -5,7 +5,11 @@ function updateContents(contents) {
     if (contents && contents.length > 0) {
         contents.forEach(content => {
             const contentDiv = document.createElement('div');
-            contentDiv.classList.add('content-item');
+            contentDiv.classList.add('content-item', 'card');
+
+            const image = document.createElement('img');
+            image.src = `http://localhost:3000/static/thumbnails?id=${content.id}`;
+            image.classList.add('content-image');
 
             const title = document.createElement('h3');
             title.textContent = content.title;
@@ -14,15 +18,14 @@ function updateContents(contents) {
             description.textContent = content.description;
 
             const referralLink = document.createElement('a');
-            referralLink.href = `your-referral-link?id=${content.id}`;
+            referralLink.href = `http://spa-client/watch?id=${content.id}`;
             referralLink.textContent = 'View More';
             referralLink.classList.add('referral-link');
-            referralLink.style.position = 'absolute';
-            referralLink.style.bottom = '10px';
-            referralLink.style.right = '10px';
 
+            contentDiv.appendChild(image);
             contentDiv.appendChild(title);
             contentDiv.appendChild(description);
+            contentDiv.appendChild(referralLink);
 
             premiumContentContainer.appendChild(contentDiv);
         });
@@ -33,6 +36,8 @@ function updateContents(contents) {
         premiumContentContainer.appendChild(noResultsMessage);
     }
 }
+
+
 
 function clearData() {
     const dataContainer = document.getElementById("premium-content-container");
