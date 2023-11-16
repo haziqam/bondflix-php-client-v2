@@ -1,6 +1,11 @@
-# Tugas Besar 1 - Pengembangan Aplikasi Berbasis Web
+# Tugas Besar 2 - Pengembangan Aplikasi Berbasis Web
 
 <img src="asset/logo.png">
+
+## **Perubahan dari v1**
+* Penambahan page activate subscription (ada di dashboard)
+* Penambahan page premium content (ada di dashboard)
+
 
 ## **Deksripsi Web App - Web App Description**
 
