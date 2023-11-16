@@ -17,6 +17,7 @@ use Handler\Content\ContentHandler;
 use Handler\Genre\GenreHandler;
 use Handler\MyList\CheckContentMyListHandler;
 use Handler\MyList\MyListHandler;
+use Handler\Subscription\SubscriptionHandler;
 use Handler\Upload\UploadHandler;
 use Handler\User\UserHandler;
 use Middleware\API\APIAdminCheck;
@@ -49,6 +50,7 @@ try {
     $avatarHandler = AvatarHandler::getInstance($serviceContainer->getAdminService(), $serviceContainer->getUploadService());
     $myListHandler = MyListHandler::getInstance($serviceContainer->getMyListService());
     $myListCheckHandler = CheckContentMyListHandler::getInstance($serviceContainer->getMyListService());
+    $subscriptionHandler = SubscriptionHandler::getInstance($serviceContainer->getAdminService());
 } catch (Exception $e) {
     Logger::getInstance()->logMessage('Fail to load services '. $e->getMessage());
     exit();
@@ -124,7 +126,6 @@ $router->addPage('/admin/media/management', function () {
 /**
  * Registering the api routes
  */
-
 $router->addAPI('/api/auth/login', 'POST', $loginHandler);
 $router->addAPI('/api/auth/register', 'POST', $registerHandler);
 $router->addAPI('/api/auth/logout', 'POST', $logoutHandler, [APILoggedInCheck::getInstance()]);
@@ -177,6 +178,8 @@ $router->addAPI('/api/mylist', 'POST', $myListHandler, [APILoggedInCheck::getIns
 $router->addAPI('/api/mylist', 'DELETE', $myListHandler, [APILoggedInCheck::getInstance()]);
 $router->addAPI('/api/mylist/check', 'GET', $myListCheckHandler, [APILoggedInCheck::getInstance()]);
 
+
+$router->addAPI('/api/payment', 'POST', $subscriptionHandler, [APILoggedInCheck::getInstance()]);
 /**
  * Setting api or page fallback handler
  */
