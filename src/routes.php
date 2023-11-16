@@ -18,10 +18,12 @@ use Handler\Genre\GenreHandler;
 use Handler\MyList\CheckContentMyListHandler;
 use Handler\MyList\MyListHandler;
 use Handler\Subscription\SubscriptionHandler;
+use Handler\Subscription\UpdateSubscriptionHandler;
 use Handler\Upload\UploadHandler;
 use Handler\User\UserHandler;
 use Middleware\API\APIAdminCheck;
 use Middleware\API\APILoggedInCheck;
+use Middleware\API\APISoapCheck;
 use Middleware\Page\AdminCheck;
 use Middleware\Page\LoggedInCheck;
 use Middleware\Page\NotSubscribedCheck;
@@ -51,6 +53,7 @@ try {
     $myListHandler = MyListHandler::getInstance($serviceContainer->getMyListService());
     $myListCheckHandler = CheckContentMyListHandler::getInstance($serviceContainer->getMyListService());
     $subscriptionHandler = SubscriptionHandler::getInstance($serviceContainer->getAdminService());
+    $updateSubscriptionHandler = UpdateSubscriptionHandler::getInstance($serviceContainer->getAdminService());
 } catch (Exception $e) {
     Logger::getInstance()->logMessage('Fail to load services '. $e->getMessage());
     exit();
@@ -180,6 +183,7 @@ $router->addAPI('/api/mylist/check', 'GET', $myListCheckHandler, [APILoggedInChe
 
 
 $router->addAPI('/api/payment', 'POST', $subscriptionHandler, [APILoggedInCheck::getInstance()]);
+$router->addAPI('/api/subscription', 'POST', $updateSubscriptionHandler, [APISoapCheck::getInstance()]);
 /**
  * Setting api or page fallback handler
  */
