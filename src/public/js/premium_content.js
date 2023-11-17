@@ -8,7 +8,7 @@ function updateContents(contents) {
             contentDiv.classList.add('content-item', 'card');
 
             const image = document.createElement('img');
-            image.src = `http://rest_server:3000/static/thumbnails?id=${content.id}`;
+            image.src = `http://host.docker.internal:3000/static/thumbnails?id=${content.id}`;
             image.classList.add('content-image');
 
             const title = document.createElement('h3');
@@ -18,7 +18,7 @@ function updateContents(contents) {
             description.textContent = content.description;
 
             const referralLink = document.createElement('a');
-            referralLink.href = `http://bondflix-spa/watch?id=${content.id}`;
+            referralLink.href = `http://host.docker.internal:5173/watch?id=${content.id}`;
             referralLink.textContent = 'View More';
             referralLink.classList.add('referral-link');
 
